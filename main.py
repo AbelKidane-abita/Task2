@@ -12,7 +12,7 @@ devicetorunon = 'cpu'  # Default device to run on the execution
 #    devicetorunon = 'cpu'
 #    print("GPU is not available, thus running on CPU")
 
-# Load the model.
+# Load the model. 
 model = YOLO('yolov8n.pt')
 
 # Training.
@@ -24,6 +24,6 @@ results = model.train(
    name='yolov8n_v8_head_detector',
    device=devicetorunon,
    project='Dataset/TrainedModel',
-   lr0=0.1,
-   lrf=0.1
+   lr0=0.001,
+   lrf=0.001
 )
