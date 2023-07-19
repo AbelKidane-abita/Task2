@@ -1,6 +1,5 @@
 train: ../Dataset/train/images
 val: ../Dataset/valid/images
-test: ../Dataset/test/images
 
-nc: 1
-names: ['people']
+nc: 2
+names: ['head', 'person']

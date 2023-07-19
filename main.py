@@ -18,12 +18,11 @@ model = YOLO('yolov8n.pt')
 # Training.
 results = model.train(
    data='data_head.yaml',
-   imgsz=480,
+   imgsz=640,
    epochs=20,
    batch=8,
    name='yolov8n_v8_head_detector',
    device=devicetorunon,
    project='Dataset/TrainedModel',
-   lr0=0.001,
-   lrf=0.001
+   optimizer=
 )
