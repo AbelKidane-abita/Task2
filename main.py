@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-# import clearml
+# import clearml 
 # clearml.browser_login()
 
 devicetorunon = 'gpu'  # Default device to run on the execution
