@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN pip3 install --upgrade pip
 RUN pip3 install ultralytics
 RUN pip3 install opencv-python-headless
-# RUN pip3 install clearml
+RUN pip3 install clearml
 
 
 COPY main.py main.py
