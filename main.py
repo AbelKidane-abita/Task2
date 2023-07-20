@@ -1,17 +1,17 @@
 from ultralytics import YOLO
+import torch
 
 # import clearml 
 # clearml.browser_login()
 
-devicetorunon = 'gpu'  # Default device to run on the execution
-# import torch
-# print("Cuda is available: ", torch.cuda.is_available())
-# if (torch.cuda.is_avainlable()):
-#    devicetorunon = 'gpu'
-#    print("GPU is Available, thus running on GPU")
-# else:
-#    devicetorunon = 'cpu'
-#    print("GPU is not available, thus running on CPU")
+devicetorunon = "cuda" # Default device to run on the execution
+
+if torch.cuda.is_available():
+    device = torch.device("cuda")
+    print(f"GPU {torch.cuda.get_device_name(0)} is available")
+else:
+    device = torch.device("cpu")
+    print("No GPU available, using CPU instead")
 
 # Load the model. 
 model = YOLO('yolov8n.pt')
@@ -20,9 +20,10 @@ model = YOLO('yolov8n.pt')
 results = model.train(
    data='data_head.yaml',
    imgsz=640,
-   epochs=10,
-   batch=32,
+   epochs=20,
+   batch=128,
    name='yolov8n_v8_head_detector',
    device=devicetorunon,
-   project='Dataset/TrainedModel'
+   project='Dataset/TrainedModel',
+   optimizer='RMSProp'
 )
