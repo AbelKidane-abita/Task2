@@ -6,7 +6,7 @@ from ultralytics import YOLO
 devicetorunon = 'gpu'  # Default device to run on the execution
 # import torch
 # print("Cuda is available: ", torch.cuda.is_available())
-# if (torch.cuda.is_available()):
+# if (torch.cuda.is_avainlable()):
 #    devicetorunon = 'gpu'
 #    print("GPU is Available, thus running on GPU")
 # else:

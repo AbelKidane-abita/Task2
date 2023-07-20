@@ -1,6 +1,7 @@
-# CrowdHuman > 2023-06-27 11:58am
-https://universe.roboflow.com/muhammad-suzaki-zahran/crowdhuman-rmy5m
+# undefined > 2021-12-01 10:52pm
+https://public.roboflow.ai/object-detection/undefined
 
-Provided by a Roboflow user
+Provided by undefined
 License: CC BY 4.0
 
+undefined

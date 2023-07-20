@@ -1,10 +1,10 @@
-FROM python:3.10.12-bullseye
+FROM ultralytics/ultralytics
 WORKDIR /app
 
 RUN pip3 install --upgrade pip
-RUN pip3 install ultralytics
+#RUN pip3 install ultralytics
 RUN pip3 install opencv-python-headless
-RUN pip3 install clearml
+# RUN pip3 install clearml
 
 
 COPY main.py main.py
