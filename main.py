@@ -1,8 +1,9 @@
 from ultralytics import YOLO
-import clearml
 
-clearml.browser_login()
-devicetorunon = 'cpu'  # Default device to run on the execution
+# import clearml
+# clearml.browser_login()
+
+devicetorunon = 'gpu'  # Default device to run on the execution
 # import torch
 # print("Cuda is available: ", torch.cuda.is_available())
 # if (torch.cuda.is_available()):
@@ -19,10 +20,9 @@ model = YOLO('yolov8n.pt')
 results = model.train(
    data='data_head.yaml',
    imgsz=640,
-   epochs=20,
-   batch=8,
+   epochs=10,
+   batch=32,
    name='yolov8n_v8_head_detector',
    device=devicetorunon,
-   project='Dataset/TrainedModel',
-   optimizer=
+   project='Dataset/TrainedModel'
 )
