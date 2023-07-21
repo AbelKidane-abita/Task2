@@ -12,7 +12,6 @@ if torch.cuda.is_available():
 else:
     device = torch.device("cpu")
     print("No GPU available, using CPU instead")
-    devicetorunon = "cpu"
 
 # Load the model. 
 model = YOLO('yolov8n.pt')
@@ -25,6 +24,6 @@ results = model.train(
    batch=128,
    name='yolov8n_v8_head_detector',
    project='Dataset/TrainedModel',
-   optimizer='Adam'
+   optimizer='RMSProp'
 )
 #    device=devicetorunon,
